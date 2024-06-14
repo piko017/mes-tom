@@ -25,9 +25,6 @@
         <FullScreen />
         <LocalePicker />
         <MsgNotice />
-        <Tooltip :title="$t('routes.account.about')" placement="bottom">
-          <ClusterOutlined @click="$router.push({ name: 'account-about' })" />
-        </Tooltip>
         <ChangeFactory />
         <div>{{ userInfo.realName }}</div>
         <Dropdown placement="bottomRight">

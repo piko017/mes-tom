@@ -1,5 +1,7 @@
 # TMom
 
+<div align=center><img src="./web/src/assets/images/logo.png" width="100"></div>
+
 #### 介绍
 支持多厂区/多项目级的MOM/MES系统，计划排程、工艺路线设计、在线低代码报表、大屏看板、移动端、AOT客户端......
 目标是尽可能打造一款通用的生产制造系统。前端基于最新的vue3、ts、antdesignvue, 后端使用.net8、Sqlsugar，支持多种数据库切换、数据隔离与聚合
@@ -71,3 +73,7 @@ pnpm build
 - 系统集成
   
 ![image](./web/src/assets/demo/5.png)
+
+- APP
+![image](./web/src/assets/demo/app1.png) ![image](./web/src/assets/demo/app2.png) 
+![image](./web/src/assets/demo/app3.png)

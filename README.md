@@ -1,6 +1,7 @@
-# TMom
 
 <div align=center><img src="./web/src/assets/images/logo.png" width="100"></div>
+
+# TMom
 
 #### 介绍
 支持多厂区/多项目级的MOM/MES系统，计划排程、工艺路线设计、在线低代码报表、大屏看板、移动端、AOT客户端......
@@ -38,7 +39,7 @@ pnpm build
 3. 基础代码前后端CRUD+数据库表直接使用代码生成
 4. 报表查询在线配置Sql/Api方式查询数据，支持多种数据源: sqlserver、mysql、pgSql等等
 5. 大屏基于goview修改，增加了部分组件
-6. 移动端使用uniapp开发，暗黑模式、字体调整、在线升级等等，主要用于车间操作，如设备点检、保养、报修维修等
+6. 移动端使用uniapp开发，暗黑模式、在线升级等等，主要用于车间操作，如设备点检、保养、报修维修等
 7. 在线模板功能设计，根据不同行业不同需求，设计符合业务需求的操作模板界面
 8. 支持多厂区/多项目级，支持数据隔离与聚合报表数据查询，非常适合集团性、多元化企业
 9. 可视化工艺流程、工艺文件管理、工单排程
@@ -47,10 +48,10 @@ pnpm build
 
 ### TODO
 
-1. 仓库模块
-2. 质量模块
-3. 消息模块
-   ...
+- [ √ ] 质量管理
+- [   ] 仓库管理
+- [   ] 数据采集
+- [   ] 消息管理
 
 #### 项目截图
 
@@ -75,5 +76,9 @@ pnpm build
 ![image](./web/src/assets/demo/5.png)
 
 - APP
-![image](./web/src/assets/demo/app1.png) ![image](./web/src/assets/demo/app2.png) 
-![image](./web/src/assets/demo/app3.png)
+  
+<div align=center>
+   <img src="./web/src/assets/demo/app1.png" width="300">
+   <img src="./web/src/assets/demo/app2.png" width="300">
+   <img src="./web/src/assets/demo/app3.png" width="300">
+</div>

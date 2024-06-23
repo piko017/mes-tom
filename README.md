@@ -34,7 +34,7 @@ pnpm build
 
 #### 说明
 
-1. 前端基于vue3-antdv-admin开发，感谢大佬开源的项目!
+1. 前端基于vue3-antdv-admin开发!
 2. 后端基于.net8、Sqlsugar DDD架构，支持多种数据库
 3. 基础代码前后端CRUD+数据库表直接使用代码生成
 4. 报表查询在线配置Sql/Api方式查询数据，支持多种数据源: sqlserver、mysql、pgSql等等

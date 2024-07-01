@@ -76,6 +76,10 @@ pnpm build
   
 ![image](./web/src/assets/demo/6.png)
 
+- 终端作业(客户端)
+  
+![image](./web/src/assets/demo/6-1.png)
+
 - 编码规则
   
 ![image](./web/src/assets/demo/7.png)
@@ -87,8 +91,8 @@ pnpm build
 - 对象存储
   
 <div align=center>
-   <img src="./web/src/assets/demo/9.png" width="400">
-   <img src="./web/src/assets/demo/8.png" width="400">
+   <img src="./web/src/assets/demo/9.png" width="500">
+   <img src="./web/src/assets/demo/8.png" width="500">
 </div>
 
 - APP

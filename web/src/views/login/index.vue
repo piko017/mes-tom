@@ -111,7 +111,6 @@
   const themeStore = useLayoutSettingStore()
   themeStore.setColorPrimary(themeStore.getPrimaryColor ?? '#13C2C2')
 
-
   const updateCaptcha = async () => {
     const { id, img } = await getImageCaptcha({
       width: 100,
@@ -122,7 +121,6 @@
     state.formInline.captchaId = id
   }
   updateCaptcha()
-
 
   const handleSubmit = async () => {
     const { username, password, verifyCode, remember } = state.formInline
@@ -165,7 +163,6 @@
       updateCaptcha()
     }
   }
-
 </script>
 
 <style lang="less" scoped>

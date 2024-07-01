@@ -5,14 +5,14 @@
 
 #### 介绍
 支持多厂区/多项目级的MOM/MES系统，计划排程、工艺路线设计、在线低代码报表、大屏看板、移动端、AOT客户端......
-目标是尽可能打造一款通用的生产制造系统。前端基于最新的vue3、ts、antdesignvue, 后端使用.net8、Sqlsugar，支持多种数据库切换、数据隔离与聚合
+目标是尽可能打造一款通用的生产制造系统。前端基于最新的vue3、ts、ant design vue, 后端使用.net8、Sqlsugar，支持多种数据库切换、数据隔离与聚合
 
 - 账号：test，密码：123456
 - [在线预览](https://www.yefeng.club/)
   
 #### 安装
 
--- 安装依赖
+- 安装依赖
 
 ```bash
 pnpm install
@@ -49,8 +49,9 @@ pnpm build
 ### TODO
 
 - [ √ ] 质量管理
+- [ √ ] APP管理
 - [   ] 仓库管理
-- [   ] 数据采集
+- [ √ ] 数据采集
 - [   ] 消息管理
 
 #### 项目截图
@@ -67,15 +68,32 @@ pnpm build
   
 ![image](./web/src/assets/demo/3.png)
 
-- 报表配置
+- 报表查询
   
-![image](./web/src/assets/demo/4.png)
+![image](./web/src/assets/demo/11.png)
 
-- 系统集成
+- 终端作业
   
-![image](./web/src/assets/demo/5.png)
+![image](./web/src/assets/demo/6.png)
+
+- 编码规则
+  
+![image](./web/src/assets/demo/7.png)
+
+- 打印模板
+  
+![image](./web/src/assets/demo/10.png)
+
+- 对象存储
+  
+<div align=center>
+   <img src="./web/src/assets/demo/9.png" width="400">
+   <img src="./web/src/assets/demo/8.png" width="400">
+</div>
 
 - APP
+  
+![image](./web/src/assets/demo/5.png)
   
 <div align=center>
    <img src="./web/src/assets/demo/app1.png" width="300">

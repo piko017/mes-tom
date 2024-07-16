@@ -11,7 +11,6 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "pnpm nx:build",
     "bootstrap": "pnpm install",
     "serve": "npm run dev",
     "dev": "vite dev",
@@ -48,6 +47,7 @@
     "cropperjs": "^1.5.12",
     "crypto-js": "^4.2.0",
     "dayjs": "~1.11.10",
+    "echarts": "^5.5.0",
     "file-saver": "~2.0.5",
     "lodash-es": "~4.17.21",
     "mitt": "~3.0.1",

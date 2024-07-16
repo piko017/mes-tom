@@ -144,12 +144,9 @@
       }
       message.success(t('common.loginSuccess'))
       setTimeout(() => {
-        const path = router.getRoutes().filter(item => item.path === IFRAME_WELCOME_ROUTE)?.length
-          ? IFRAME_WELCOME_ROUTE
-          : '/'
-        // router.replace(path)
-        router.push({ path })
-        if (username === 'test') message.warn(t('common.testUserTip'), 5)
+        const path = '/dashboard'
+        router.replace(path)
+        // router.push({ path })
       })
     } catch (error: any) {
       Modal.error({

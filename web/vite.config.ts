@@ -8,7 +8,6 @@ import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import Unocss from 'unocss/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import dayjs from 'dayjs'
-import TinymceResourcePlugin from '@admin-pkg/vite-plugin-tinymce-resource'
 import pkg from './package.json'
 import type { UserConfig, ConfigEnv } from 'vite'
 
@@ -44,7 +43,6 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       vueJsx({
         // options are passed on to @vue/babel-plugin-jsx
       }),
-      TinymceResourcePlugin({ baseUrl: '/tinymce-resource/' }),
       createSvgIconsPlugin({
         iconDirs: [resolve(CWD, 'src/assets/icons')],
         symbolId: 'svg-icon-[dir]-[name]',

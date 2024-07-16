@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-
+import * as echarts from 'echarts'
 // import useFormModal from '@/hooks/useFormModal'
 // import useModal from '@/hooks/useModal/index';
 import permission from '@/permission'
@@ -10,6 +10,7 @@ import permission from '@/permission'
  */
 export function setupGlobalMethods(app: App) {
   app.use(permission)
+  app.config.globalProperties.$echarts = echarts
   // app.use(useFormModal)
   // app.use(useModal);
   // 全局挂载Reflect反射对象,以便在vue模板中使用

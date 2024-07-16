@@ -1,0 +1,3 @@
+﻿namespace TMom.Domain.Model
+{
+}

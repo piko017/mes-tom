@@ -9,13 +9,16 @@
 
 - 账号：test，密码：123456
 - [在线预览](https://www.yefeng.club/)
+- [说明文档](https://yefeng.club/tmomdoc/)
   
 #### 安装
 
 - 安装依赖
 
 ```bash
-pnpm install
+cd ./web
+
+pnpm i
 
 ```
 
@@ -31,6 +34,7 @@ pnpm dev
 pnpm build
 ```
 
+#### 系统架构
 
 #### 说明
 
@@ -50,9 +54,11 @@ pnpm build
 
 - [ √ ] 质量管理
 - [ √ ] APP管理
-- [   ] 仓库管理
 - [ √ ] 数据采集
+- [   ] 仓库管理
 - [   ] 消息管理
+- [   ] 产品追溯
+- [   ] 设备OEE
 
 #### 项目截图
 

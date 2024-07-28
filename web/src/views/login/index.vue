@@ -72,23 +72,16 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
-  import { ConfigProvider, type SelectProps } from 'ant-design-vue'
-  import {
-    UserOutlined,
-    LockOutlined,
-    SafetyOutlined,
-    ProfileOutlined,
-  } from '@ant-design/icons-vue'
-  import { useRoute, useRouter } from 'vue-router'
-  import { message, Modal, Tooltip } from 'ant-design-vue'
+  import { reactive } from 'vue'
+  import { ConfigProvider, message, Modal } from 'ant-design-vue'
+  import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons-vue'
+  import { useRouter } from 'vue-router'
   import { useUserStore } from '@/store/modules/user'
   import { getImageCaptcha } from '@/api/login'
   import { Storage } from '@/utils/Storage'
   import { REMEMBERUSER } from '@/enums/cacheEnum'
   import { useLayoutSettingStore } from '@/store/modules/layoutSetting'
   import { themeColor } from '@/layout/header/components/setting/constant'
-  import { IFRAME_WELCOME_ROUTE } from '@/router/constant'
   import { useI18n } from '@/hooks/useI18n'
 
   const { t } = useI18n()

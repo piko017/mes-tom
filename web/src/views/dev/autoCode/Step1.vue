@@ -76,7 +76,7 @@
   const parentName = ref('')
   const getPath = async () => {
     const data = await action.getVuePath()
-    msg.value = `使用CodeFirst生成后端代码, 生成前请先创建表的实体类! 当前vue生成路径: ${data}, 请检查是否正确!`
+    msg.value = `生成前请先创建表的实体类! 当前vue生成路径: ${data}, 请检查是否正确!`
   }
   getPath()
 

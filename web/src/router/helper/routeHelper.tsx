@@ -129,5 +129,5 @@ const renderI18nRouterName = (key: string, defaultVal: string) => {
   const i18nName = i18n.global.t(key)
   // 翻译后的文本和key相同, 则使用默认值
   if (!i18nName || i18nName == key) return defaultVal
-  return t(key) // 路由菜单一定要使用这个t, 不要使用 i18nName, 否则切换语言时不会自动变更
+  return t(key)
 }

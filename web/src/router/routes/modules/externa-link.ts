@@ -2,11 +2,11 @@ import { RouterView, type RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: 'https://github.com/buqiyuan/nest-admin',
-    name: 'https://github.com/buqiyuan/nest-admin',
+    path: 'https://gitee.com/thgao/tmom',
+    name: 'https://gitee.com/thgao/tmom',
     component: RouterView,
     meta: {
-      title: '后台代码仓库',
+      title: '代码仓库',
       icon: 'ant-design:link-outlined',
       isExt: true,
       extOpenMode: 1,

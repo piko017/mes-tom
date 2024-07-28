@@ -55,8 +55,8 @@ pnpm build
 - [ √ ] 质量管理
 - [ √ ] APP管理
 - [ √ ] 数据采集
+- [ √ ] 消息管理
 - [   ] 仓库管理
-- [   ] 消息管理
 - [   ] 产品追溯
 - [   ] 设备OEE
 
@@ -73,6 +73,10 @@ pnpm build
 - 模板设计
   
 ![image](./web/src/assets/demo/3.png)
+
+- 操作日志
+  
+![image](./web/src/assets/demo/12.png)
 
 - 报表查询
   

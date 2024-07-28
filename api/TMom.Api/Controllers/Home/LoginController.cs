@@ -70,7 +70,7 @@ namespace TMom.Api.Controllers.Home
         }
 
         /// <summary>
-        /// 获取JWT的方法：整个系统主要方法
+        /// 获取JWT
         /// </summary>
         /// <param name="loginParams">登录参数</param>
         /// <returns></returns>

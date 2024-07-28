@@ -66,11 +66,9 @@
         onFinish: async values => {
           values.id = record.id
           const menusRef = formRef?.compRefMap.get('menuIds')!
-          // const deptsRef = formRef.value?.compRefs?.depts
           const params = {
             ...values,
             menus: [...menusRef.halfCheckedKeys, ...menusRef.checkedKeys],
-            // depts: [...deptsRef.halfCheckedKeys, ...deptsRef.checkedKeys]
           }
           console.log('新增/编辑角色', params)
           await (record.id ? action.update : action.add)(params)
@@ -83,34 +81,25 @@
       },
     })
 
-    // const [deptData, menuData] = await Promise.all([getDeptList(), getMenuList()])
     const menuData = await menuAction.getMenuList()
     const menuTree = formatMenu2Tree(menuData)
-    // const deptTree = formatDept2Tree(deptData)
 
     formRef?.updateSchema([
       {
         field: 'menus',
         componentProps: { treeData: menuTree },
       },
-      // {
-      //   field: 'depts',
-      //   componentProps: { treeData: deptTree }
-      // }
     ])
-    // 如果是编辑的话，需要获取角色详情
     if (record.id) {
       const data = await action.getById(record.id)
       const menus = await menuAction.getMenuListByRoleId(record.id)
       const menuIds = menus.map(n => n.id)
-      // const deptIds = data.depts.map(n => n.departmentId)
 
       formRef?.setFieldsValue({
         ...record,
         roleName: data.roleName,
         description: data.description,
         menus: getCheckedKeys(menuIds, menuTree),
-        // depts: getCheckedKeys(deptIds, deptTree)
       })
     }
   }
@@ -128,7 +117,7 @@
       width: 55,
       align: 'center',
       hideInTable: true,
-      hideInSearch: true, // 不放在查询中
+      hideInSearch: true,
     },
     {
       title: '名称',
@@ -146,7 +135,6 @@
       title: '创建人',
       dataIndex: 'createUser',
       align: 'center',
-      //bodyCell: ({ record }) => record.createUser
     },
     {
       title: '创建时间',
@@ -219,24 +207,5 @@
         },
       },
     },
-    // {
-    //   field: 'depts',
-    //   component: 'Tree',
-    //   label: '部门权限',
-    //   colProps: {
-    //     span: 12
-    //   },
-    //   componentProps: {
-    //     checkable: true,
-    //     vModelKey: 'checkedKeys',
-    //     style: {
-    //       height: '300px',
-    //       paddingTop: '5px',
-    //       overflow: 'auto',
-    //       borderRadius: '6px',
-    //       border: '1px solid #dcdfe6'
-    //     }
-    //   }
-    // }
   ]
 </script>

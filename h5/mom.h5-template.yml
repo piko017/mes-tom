@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  mom.h5:
+    image: mom/mom.h5:{tag}
+    container_name: mom.h5
+    privileged: true
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - /var/log/nginx/momh5/:/var/log/nginx/
+    ports:
+      - 5005:80

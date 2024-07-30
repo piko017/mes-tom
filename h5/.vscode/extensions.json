@@ -1,0 +1,15 @@
+//////////////////////////////////
+// 向此工作区的用户推荐的扩展列表 //
+/////////////////////////////////
+
+{
+  "recommendations": [
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode", // 代码格式化
+    "dbaeumer.vscode-eslint", //代码质量检查
+    "zignd.html-css-class-completion",
+    "tmui-helper.tmui-helper", // tmui组件库
+    "antfu.unocss",
+    "vue.volar"
+  ]
+}

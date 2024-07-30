@@ -1,0 +1,141 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^tm-(.*)": "@/tmui/components/tm-$1/tm-$1.vue",
+      "^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)": "z-paging/components/z-paging$1/z-paging$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "name": "Home",
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom",
+        "titlePenetrate": "YES",
+        "transparentTitle": "always"
+      },
+      "meta": {
+        "tabBar": true
+      }
+    },
+    {
+      "name": "report",
+      "path": "pages/report/index",
+      "style": {
+        "navigationBarTitleText": "报表",
+        "navigationStyle": "custom"
+      },
+      "meta": {
+        "tabBar": true
+      }
+    },
+    {
+      "name": "Sys",
+      "path": "pages/sys/index",
+      "style": {
+        "navigationBarTitleText": "工作台",
+        "navigationStyle": "custom"
+      },
+      "meta": {
+        "ignoreAuth": true,
+        "tabBar": true
+      }
+    },
+    {
+      "name": "User",
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      },
+      "meta": {
+        "ignoreAuth": true,
+        "tabBar": true
+      }
+    },
+    {
+      "name": "Login",
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      },
+      "meta": {
+        "ignoreAuth": true
+      }
+    },
+    {
+      "name": "Msg",
+      "path": "pages/msg/index",
+      "style": {
+        "navigationBarTitleText": "消息",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "name": "NotFound",
+      "path": "pages/notFound/404",
+      "style": {
+        "navigationBarTitleText": "Not Found"
+      },
+      "meta": {
+        "ignoreAuth": true
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages_sub",
+      "pages": [
+        {
+          "path": "editUser/index",
+          "style": {
+            "navigationBarTitleText": "修改个人信息"
+          }
+        },
+        {
+          "path": "sys/msgList/index",
+          "style": {
+            "navigationBarTitleText": "我的订阅消息"
+          }
+        },
+        {
+          "path": "msg/msgDetail",
+          "style": {
+            "navigationBarTitleText": "消息明细",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sys/equipment/inspection/index",
+          "style": {
+            "navigationBarTitleText": "设备点检"
+          }
+        },
+        {
+          "path": "sys/equipment/maintenance/index",
+          "style": {
+            "navigationBarTitleText": "设备保养"
+          }
+        },
+        {
+          "path": "sys/equipment/components/form",
+          "style": {
+            "navigationBarTitleText": "表单明细"
+          }
+        }
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F2F2F2",
+    "backgroundColor": "#F2F2F2",
+    "navigationStyle": "default",
+    "renderingMode": "seperated",
+    "pageOrientation": "portrait"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "4416420",
+  "name": "lyapp",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "568545",
+      "name": "品质管理",
+      "font_class": "pinzhiguanli",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "4719760",
+      "name": "库存管理",
+      "font_class": "kucunguanli",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    },
+    {
+      "icon_id": "5062721",
+      "name": "设备管理",
+      "font_class": "shebeiguanli",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "9877389",
+      "name": "能源管理",
+      "font_class": "ziyuan",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "11441215",
+      "name": "运营管理",
+      "font_class": "yunyingguanli",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "22612622",
+      "name": "财务管理",
+      "font_class": "caiwuguanli",
+      "unicode": "e9e5",
+      "unicode_decimal": 59877
+    },
+    {
+      "icon_id": "36830898",
+      "name": "生产管理",
+      "font_class": "shengchanguanli",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "1526312",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "15726729",
+      "name": "报表",
+      "font_class": "baobiao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    }
+  ]
+}

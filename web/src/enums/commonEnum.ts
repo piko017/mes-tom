@@ -90,3 +90,16 @@ export enum TagColorEnum {
   'cyan',
   'default',
 }
+
+/** 属性类型枚举 */
+export enum AttributeTypeEnum {
+  'Global' = '全局',
+  'Workshop' = '车间',
+  'Line' = '产线',
+  'Workstation' = '工位',
+  'ProcessOperation' = '工序',
+  'Part' = '产品料号',
+  'WorkOrder' = '工单',
+  'Product' = '产品',
+  'Equipment' = '设备',
+}

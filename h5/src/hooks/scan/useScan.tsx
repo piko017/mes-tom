@@ -23,7 +23,7 @@ export const useScan = (cb: (val: string) => void) => {
     } else {
       uni.scanCode({
         success: res => {
-          cb(res.result)
+          onSuccessCb(res.result)
         },
         fail: err => {
           // 扫码失败

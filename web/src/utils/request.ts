@@ -81,10 +81,6 @@ service.interceptors.response.use(
     // 自定义的请求直接返回
     if ((response.config as any)?.isCustomHttp_ || res instanceof Blob)
       return Promise.resolve(response)
-    // 处理要解密的响应数据
-    if (res && import.meta.env.PROD) {
-      res = JSON.parse(response.data as any)
-    }
 
     // if the custom code is not 200, it is judged as an error.
     if (res.status !== ResultEnum.SUCCESS || !res.success) {

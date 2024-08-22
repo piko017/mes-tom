@@ -103,7 +103,7 @@ namespace TMom.Api.Controllers
         #region 处理列字段
 
         /// <summary>
-        /// 模糊查询列 eg: x.Name like '%admin%'
+        /// 模糊查询列 e.g: x.Name like '%admin%'
         /// </summary>
         /// <param name="whereExpression"></param>
         /// <param name="includeWhereExpList"></param>
@@ -124,7 +124,7 @@ namespace TMom.Api.Controllers
         }
 
         /// <summary>
-        /// 精确Equals查询列 eg: x.Name == 'admin'
+        /// 精确Equals查询列 e.g: x.Name == 'admin'
         /// </summary>
         /// <param name="whereExpression"></param>
         /// <param name="includeWhereExpList"></param>
@@ -145,7 +145,7 @@ namespace TMom.Api.Controllers
         }
 
         /// <summary>
-        /// 多个In查询列 eg: x.Name In ('admin','test')
+        /// 多个In查询列 e.g: x.Name In ('admin','test')
         /// </summary>
         /// <param name="whereExpression"></param>
         /// <param name="includeWhereExpList"></param>
@@ -167,7 +167,7 @@ namespace TMom.Api.Controllers
         }
 
         /// <summary>
-        /// Bool查询列 eg: x.IsDeleted = true
+        /// Bool查询列 e.g: x.IsDeleted = true
         /// </summary>
         /// <param name="whereExpression"></param>
         /// <param name="includeWhereExpList"></param>

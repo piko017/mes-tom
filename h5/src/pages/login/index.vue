@@ -58,7 +58,6 @@
   import { themeColors } from '@/utils/constant'
   import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia'
   import { omit } from 'lodash-es'
-  import { useRequest } from 'alova'
   import { useAutoUpdate } from '@/hooks/app/useAutoUpdate'
 
   const pageQuery = ref<Record<string, any> | undefined>(undefined)
@@ -82,9 +81,8 @@
   const authStore = useAuthStore()
   const tmStore = useTmpiniaStore()
 
-  const { send: sendLogin } = useRequest(login, { immediate: false })
   const submit = () => {
-    sendLogin({
+    login({
       username: form.username,
       password: form.password,
       factoryId: form.factoryId[0]

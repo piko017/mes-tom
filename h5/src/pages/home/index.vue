@@ -18,7 +18,6 @@
   import { language } from '@/tmui/tool/lib/language'
   import { Iconify } from '@/components/Iconify'
   import { useWindowInfo } from '@/tmui/tool/useFun/useWindowInfo'
-  import { useRequest } from 'alova'
   import { useAuthStore } from '@/state/modules/auth'
   import { useThemeColor } from '@/hooks/theme/useThemeColor'
   import { formatMsgDate } from '@/utils/date'

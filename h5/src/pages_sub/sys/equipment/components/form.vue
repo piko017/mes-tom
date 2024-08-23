@@ -133,7 +133,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { useRequest } from 'alova'
   import { getItemListByFormId, cancelPlan, submitPlanForm, uploadImgUrl } from '@/api/equipment'
   import { ResultStatusEnum } from '@/enums/commonEnum'
   import { Toast } from '@/utils/uniapi/prompt'
@@ -175,13 +174,9 @@
   })
   const items = ref<FormItemType[]>([])
 
-  const { send: sendGetItemList } = useRequest(getItemListByFormId, { immediate: false })
-  const { send: sendCancelPlan } = useRequest(cancelPlan, { immediate: false })
-  const { send: sendSubmitPlanForm } = useRequest(submitPlanForm, { immediate: false })
-
   const init = async () => {
     if (!formId.value) return
-    const data = await sendGetItemList(formId.value).finally(() => (loading.value = false))
+    const data = await getItemListByFormId(formId.value).finally(() => (loading.value = false))
     items.value = data
   }
 
@@ -241,7 +236,7 @@
       Toast('请填写取消原因!')
       return
     }
-    await sendCancelPlan(trackId.value, cancelModalInfo.reason)
+    await cancelPlan(trackId.value, cancelModalInfo.reason)
     Toast('取消成功!')
     uni.navigateBack({ delta: 2 })
   }
@@ -267,7 +262,7 @@
         }
       })
     }
-    await sendSubmitPlanForm(data)
+    await submitPlanForm(data)
     Toast('提交成功!')
     uni.navigateBack({ delta: 2 })
   }

@@ -35,13 +35,11 @@
   import CustomHeader from '@/components/CustomHeader/index.vue'
   import CustomTabBar from '@/components/CustomTabBar/index.vue'
   import BasicGridItem from '@/components/BasicGridItem/index.vue'
-  import { useRequest } from 'alova'
   import { language } from '@/tmui/tool/lib/language'
   import { Icon } from '@iconify/vue'
   import { useAuthStore } from '@/state/modules/auth'
   import { getAuthMenus } from '@/api/home'
 
-  const { send: sendGetAuthMenus } = useRequest(getAuthMenus, { immediate: false })
   const router = useRouter()
   const authStore = useAuthStore()
 
@@ -51,7 +49,7 @@
     () => authStore.getUserMenus,
     async val => {
       if (!val || val.length === 0) {
-        menus.value = await sendGetAuthMenus()
+        menus.value = await getAuthMenus()
       } else {
         menus.value = val
       }

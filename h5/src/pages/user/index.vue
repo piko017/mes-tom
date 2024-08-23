@@ -169,8 +169,7 @@
   import CustomTabBar from '@/components/CustomTabBar/index.vue'
   import tmApp from '@/tmui/components/tm-app/tm-app.vue'
   import { useAuthStore } from '@/state/modules/auth'
-  import { useRequest } from 'alova'
-  import { getFactoryList, changeFactory } from '@/api/auth'
+  import { changeFactory } from '@/api/auth'
   import { renderImg } from '@/utils/file'
   import { themeColors } from '@/utils/constant'
   import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia'
@@ -210,9 +209,13 @@
   const userInfo = computed(() => authStore.getUserInfo)
 
   const img = computed(() => renderImg(userInfo.value?.avatar))
-  const { data: factoryList } = useRequest(getFactoryList)
-
-  const { send: sendChangeFactory } = useRequest(changeFactory, { immediate: false })
+ 
+  const factoryList = computed(() => {
+    return (authStore.getUserInfo?.hasAuthFactoryList || []).map(item => ({
+      text: item.factoryName,
+      id: item.factoryId
+    }))
+  })
 
   /** 切换工厂 */
   const handleChangeFactory = () => {
@@ -224,7 +227,7 @@
     async newVal => {
       if (newVal.length > 0) {
         const factoryId = newVal[0] as number
-        const data = await sendChangeFactory(factoryId, authStore.getToken)
+        const data = await changeFactory(factoryId, authStore.getToken)
         authStore.afterLogin(data.token, data.expires_in)
       }
     }

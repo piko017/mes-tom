@@ -45,7 +45,6 @@
 <script lang="ts" setup>
   import { PropType, ref } from 'vue'
   import { getBySn, getToDoTrackNo } from '@/api/equipment'
-  import { useRequest } from 'alova'
   import { EquipmentInspectionEnum } from '@/enums/commonEnum'
   import { useScan } from '@/hooks/scan'
 
@@ -57,8 +56,6 @@
   })
 
   const router = useRouter()
-  const { send: sendGetBySn } = useRequest(getBySn, { immediate: false })
-  const { send: sendGetToDoTrackNo } = useRequest(getToDoTrackNo, { immediate: false })
 
   const sn = ref('')
   const list = ref<SelectOptionModel[]>([])
@@ -92,8 +89,8 @@
   const handleConfirm = async () => {
     if (!sn.value) return
     const [equipment, tracks] = await Promise.all([
-      sendGetBySn(sn.value),
-      sendGetToDoTrackNo(sn.value, props.type)
+      getBySn(sn.value),
+      getToDoTrackNo(sn.value, props.type)
     ])
     trackList.value = tracks
     equipmentInfo.value = equipment

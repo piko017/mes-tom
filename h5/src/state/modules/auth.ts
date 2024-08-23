@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { getCache, removeCache, setCache } from '@/utils/cache'
 import { TOKEN_KEY, USER_INFO_KEY } from '@/enums/cacheEnum'
-import { useRequest } from 'alova'
 import { getUserInfo } from '@/api/auth'
 import { getAuthMenus } from '@/api/home'
 
@@ -11,8 +10,6 @@ interface AuthState {
   menuList: GridCardType[]
 }
 
-const { send: sendGetUser } = useRequest(getUserInfo, { immediate: false })
-const { send: sendGetAuthMenus } = useRequest(getAuthMenus, { immediate: false })
 
 export const useAuthStore = defineStore({
   id: 'auth',
@@ -42,14 +39,12 @@ export const useAuthStore = defineStore({
         router.replaceAll({ name: 'Login' })
       }
     },
-    afterLogin(token: string, expire?: number) {
+    async afterLogin(token: string, expire?: number) {
       this.setToken(token, expire)
-      sendGetUser().then(userData => {
-        this.setUserInfo(userData, expire)
-      })
-      sendGetAuthMenus().then(menuList => {
-        this.menuList = menuList
-      })
+
+      const [userData, menuList] = await Promise.all([getUserInfo(), getAuthMenus()])
+      this.setUserInfo(userData, expire)
+      this.menuList = menuList
     },
     setToken(token: string | undefined, expire?: number) {
       setCache(TOKEN_KEY, token, expire)

@@ -81,7 +81,6 @@
   import { Toast } from '@/utils/uniapi/prompt'
   import { updateUserInfo } from '@/api/auth'
   import { language } from '@/tmui/tool/lib/language'
-  import { useRequest } from 'alova'
   import { isEmail, isPhone } from '@/tmui/tool/function/util'
   const authStore = useAuthStore()
 
@@ -94,12 +93,11 @@
     remark: userInfo.value?.remark
   })
 
-  const handleUpdate = _ => {
+  const handleUpdate = async _ => {
     const isPass = form.value?.validate().isPass
-    console.log(form.value?.validate(), isPass)
     if (!isPass) return
     const params: Partial<UserModel> = { ...userInfo.value, ...formData.value }
-    useRequest(updateUserInfo(params))
+    await updateUserInfo(params)
     authStore.setUserInfo(params)
   }
 

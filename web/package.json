@@ -70,8 +70,6 @@
   },
   "devDependencies": {
     "@admin-pkg/vite-plugin-tinymce-resource": "workspace:*",
-    "@commitlint/cli": "~19.2.1",
-    "@commitlint/config-conventional": "~19.1.0",
     "@faker-js/faker": "^8.4.1",
     "@iconify-json/ant-design": "^1.1.15",
     "@iconify-json/ep": "^1.1.15",

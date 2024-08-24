@@ -90,8 +90,8 @@
     loading: false,
     captcha: '',
     formInline: {
-      username: rememberUser?.username ?? 'test',
-      password: rememberUser?.password ?? '123456',
+      username: rememberUser?.username ?? '',
+      password: rememberUser?.password ?? '',
       verifyCode: '',
       captchaId: '',
       remember: rememberUser != null,

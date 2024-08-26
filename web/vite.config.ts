@@ -88,7 +88,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
     server: {
       host: '0.0.0.0',
-      port: 5002,
+      port: 7002,
       open: false,
       warmup: {
         clientFiles: ['./index.html', './src/{components,api}/*'],

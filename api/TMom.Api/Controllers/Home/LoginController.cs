@@ -135,7 +135,7 @@ namespace TMom.Api.Controllers.Home
             }
             else
             {
-                return Failed<TokenInfoViewModel>("认证失败，如果启用多工厂模式，请检查用户是否已分配该工厂权限!");
+                return Failed<TokenInfoViewModel>("账号或密码错误, 请重试!");
             }
         }
 
@@ -213,7 +213,7 @@ namespace TMom.Api.Controllers.Home
                     return Success(refreshToken, "获取成功");
                 }
             }
-            return Failed<TokenInfoViewModel>("认证失败！");
+            return Failed<TokenInfoViewModel>("账号或密码错误, 请重试!");
         }
 
         /// <summary>
@@ -272,7 +272,7 @@ namespace TMom.Api.Controllers.Home
                     return Success(refreshToken, "获取成功");
                 }
             }
-            return Failed<TokenInfoViewModel>("认证失败！");
+            return Failed<TokenInfoViewModel>("账号或密码错误, 请重试!");
         }
     }
 }
